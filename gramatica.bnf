@@ -2,28 +2,17 @@
 
 <declaracoes> ::= <declaracao> | <declaracao> <declaracoes>
 
-<declaracao> ::= <declaracao_variavel>
-               | <declaracao_controle>
-               | <declaracao_estrutura>
-               | <declaracao_excecao>
+<declaracao> ::= <declaracao_variavel> | <declaracao_exibicao>
 
-<declaracao_variavel> ::= <tipo> <defina> <identificador> [ "=" <expressao> ] ";"
+<declaracao_variavel> ::= "numero" <identificador> "=" <expressao> ";"
 
-<declaracao_controle> ::= <decida> "(" <expressao> ")" <corpo_controle> <caso_contrario> <corpo_controle>
-
-<corpo_controle> ::= <declaracoes>
-
-<declaracao_estrutura> ::= <tipo_estrutura> <identificador> "[" <expressao> "]" ";"
-
-<tipo> ::= "numero" | "texto" | "sinal" | "byte" | "vazio" | "conjunto" | "mapa_chave"
-
-<tipo_estrutura> ::= "estrutura"
+<declaracao_exibicao> ::= "exiba" "(" <identificador> ")" ";"
 
 <expressao> ::= <termo> | <expressao> <operador_aritmetico> <termo>
 
 <termo> ::= <fator> | <termo> <operador_aritmetico> <fator>
 
-<fator> ::= <numero> | <texto> | <identificador> | "(" <expressao> ")"
+<fator> ::= <numero> | "(" <expressao> ")"
 
 <operador_aritmetico> ::= "+" | "-" | "*" | "/"
 
