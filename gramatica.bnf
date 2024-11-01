@@ -3,16 +3,11 @@
 <declaracoes> ::= <declaracao> | <declaracao> <declaracoes>
 
 <declaracao> ::= <declaracao_variavel>
-               | <declaracao_funcao>
                | <declaracao_controle>
                | <declaracao_estrutura>
                | <declaracao_excecao>
 
 <declaracao_variavel> ::= <tipo> <defina> <identificador> [ "=" <expressao> ] ";"
-
-<declaracao_funcao> ::= <faca> <identificador> "(" [ <parametros> ] ")" <corpo_funcao> <retorne> [ <expressao> ] ";"
-
-<corpo_funcao> ::= <declaracoes>
 
 <declaracao_controle> ::= <decida> "(" <expressao> ")" <corpo_controle> <caso_contrario> <corpo_controle>
 
@@ -23,10 +18,6 @@
 <tipo> ::= "numero" | "texto" | "sinal" | "byte" | "vazio" | "conjunto" | "mapa_chave"
 
 <tipo_estrutura> ::= "estrutura"
-
-<parametros> ::= <identificador> [ "," <parametros> ]
-
-<retorne> ::= "retorne"
 
 <expressao> ::= <termo> | <expressao> <operador_aritmetico> <termo>
 
