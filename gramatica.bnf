@@ -1,0 +1,29 @@
+<programa> ::= <declarações>
+
+<declarações> ::= <declaração> | <declaração> <declarações>
+
+<declaração> ::= <declaração_variável> | <declaração_função> | <declaração_controle> | <declaração_estrutura> | <declaração_exceção>
+
+<declaração_variável> ::= <tipo> <defina> <identificador> [ "=" <expressão> ] ";"
+<declaração_função> ::= <faça> <identificador> "(" [ <parâmetros> ] ")" <fluxo> <declarações> <retorne> [ <expressão> ] ";"
+<declaração_controle> ::= <decida> "(" <expressão> ")" <fluxo> <declarações> <caso_contrário> <fluxo> <declarações>
+<declaração_estrutura> ::= <pacote> <identificador> "[" <expressão> "]" ";"
+
+<tipo> ::= "número" | "texto" | "sinal" | "byte" | "vazio" | "conjunto" | "mapa_chave"
+<parâmetros> ::= <identificador> [ "," <parâmetros> ]
+
+<fluxo> ::= "fluxo"
+<retorne> ::= "retorne"
+
+<expressão> ::= <termo> | <expressão> <operador_aritmético> <termo>
+<termo> ::= <fator> | <termo> <operador_aritmético> <fator>
+<fator> ::= <número> | <texto> | <identificador> | "(" <expressão> ")"
+
+<operador_aritmético> ::= "+" | "-" | "*" | "/"
+
+<identificador> ::= <letra> <identificador_opcional>
+<identificador_opcional> ::= <letra> <identificador_opcional> | <dígito> <identificador_opcional> | ""
+
+<número> ::= <dígito> | <dígito> <número>
+<dígito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<letra> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z"
