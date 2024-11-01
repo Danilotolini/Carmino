@@ -26,4 +26,13 @@
 
 <número> ::= <dígito> | <dígito> <número>
 <dígito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
-<letra> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z"
+<letra> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z" 
+
+<comando> ::= <movimento> | <ação> | <interação>
+<movimento> ::= "andar" <direção>
+<direção> ::= "esquerda" | "direita" | "frente" | "atrás" | "agachar" | "pular"
+<ação> ::= "atacar" <alvo> | "defender" | "fugir" | "esconder" | "usar_poder"
+<alvo> ::= <inimigo> | <objeto>
+<inimigo> ::= "inimigo" | "monstro" | "criatura"
+<objeto> ::= "tesouro" | "item" | "arma" | "poção" | "chave"
+<interação> ::= "pegar" <objeto> | "usar" <objeto> | "examinar" <objeto> | "falar" <inimigo> | "abrir" <objeto> | "soltar" <objeto>
