@@ -1,63 +1,63 @@
-<programa> ::= <declarações>
+<programa> ::= <declaracoes>
 
-<declarações> ::= <declaração> | <declaração> <declarações>
+<declaracoes> ::= <declaracao> | <declaracao> <declaracoes>
 
-<declaração> ::= <declaração_variável>
-               | <declaração_função>
-               | <declaração_controle>
-               | <declaração_estrutura>
-               | <declaração_exceção>
+<declaracao> ::= <declaracao_variavel>
+               | <declaracao_funcao>
+               | <declaracao_controle>
+               | <declaracao_estrutura>
+               | <declaracao_excecao>
 
-<declaração_variável> ::= <tipo> <defina> <identificador> [ "=" <expressão> ] ";"
+<declaracao_variavel> ::= <tipo> <defina> <identificador> [ "=" <expressao> ] ";"
 
-<declaração_função> ::= <faça> <identificador> "(" [ <parâmetros> ] ")" <corpo_função> <retorne> [ <expressão> ] ";"
+<declaracao_funcao> ::= <faca> <identificador> "(" [ <parametros> ] ")" <corpo_funcao> <retorne> [ <expressao> ] ";"
 
-<corpo_função> ::= <declarações>
+<corpo_funcao> ::= <declaracoes>
 
-<declaração_controle> ::= <decida> "(" <expressão> ")" <corpo_controle> <caso_contrário> <corpo_controle>
+<declaracao_controle> ::= <decida> "(" <expressao> ")" <corpo_controle> <caso_contrario> <corpo_controle>
 
-<corpo_controle> ::= <declarações>
+<corpo_controle> ::= <declaracoes>
 
-<declaração_estrutura> ::= <tipo_estrutura> <identificador> "[" <expressão> "]" ";"
+<declaracao_estrutura> ::= <tipo_estrutura> <identificador> "[" <expressao> "]" ";"
 
-<tipo> ::= "número" | "texto" | "sinal" | "byte" | "vazio" | "conjunto" | "mapa_chave"
+<tipo> ::= "numero" | "texto" | "sinal" | "byte" | "vazio" | "conjunto" | "mapa_chave"
 
-<tipo_estrutura> ::= "estrutura"  // Definindo o tipo da estrutura
+<tipo_estrutura> ::= "estrutura"
 
-<parâmetros> ::= <identificador> [ "," <parâmetros> ]
+<parametros> ::= <identificador> [ "," <parametros> ]
 
 <retorne> ::= "retorne"
 
-<expressão> ::= <termo> | <expressão> <operador_aritmético> <termo>
+<expressao> ::= <termo> | <expressao> <operador_aritmetico> <termo>
 
-<termo> ::= <fator> | <termo> <operador_aritmético> <fator>
+<termo> ::= <fator> | <termo> <operador_aritmetico> <fator>
 
-<fator> ::= <número> | <texto> | <identificador> | "(" <expressão> ")"
+<fator> ::= <numero> | <texto> | <identificador> | "(" <expressao> ")"
 
-<operador_aritmético> ::= "+" | "-" | "*" | "/"
+<operador_aritmetico> ::= "+" | "-" | "*" | "/"
 
 <identificador> ::= <letra> <identificador_opcional>
 
-<identificador_opcional> ::= <letra> <identificador_opcional> | <dígito> <identificador_opcional> | ""
+<identificador_opcional> ::= <letra> <identificador_opcional> | <digito> <identificador_opcional> | ""
 
-<número> ::= <dígito> | <dígito> <número>
+<numero> ::= <digito> | <digito> <numero>
 
-<dígito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
 
-<letra> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z" 
+<letra> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | ... | "Z"
 
-<comando> ::= <movimento> | <ação> | <interação>
+<comando> ::= <movimento> | <acao> | <interacao>
 
-<movimento> ::= "andar" <direção>
+<movimento> ::= "andar" <direcao>
 
-<direção> ::= "esquerda" | "direita" | "frente" | "atrás" | "agachar" | "pular"
+<direcao> ::= "esquerda" | "direita" | "frente" | "atras" | "agachar" | "pular"
 
-<ação> ::= "atacar" <alvo> | "defender" | "fugir" | "esconder" | "usar_poder"
+<acao> ::= "atacar" <alvo> | "defender" | "fugir" | "esconder" | "usar_poder"
 
 <alvo> ::= <inimigo> | <objeto>
 
 <inimigo> ::= "inimigo" | "monstro" | "criatura"
 
-<objeto> ::= "tesouro" | "item" | "arma" | "poção" | "chave"
+<objeto> ::= "tesouro" | "item" | "arma" | "pocao" | "chave"
 
-<interação> ::= "pegar" <objeto> | "usar" <objeto> | "examinar" <objeto> | "falar" <inimigo> | "abrir" <objeto> | "soltar" <objeto>
+<interacao> ::= "pegar" <objeto> | "usar" <objeto> | "examinar" <objeto> | "falar" <inimigo> | "abrir" <objeto> | "soltar" <objeto>
